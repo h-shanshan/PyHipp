@@ -33,8 +33,11 @@ lock = FileLock(lock_path, timeout=time_out_secs)
 
 with lock:
     if pmode == RESET_MODE:
+<<<<<<< HEAD
 	# create a list (named clist) of nevns environments with the
 	# prefix envprefix
+=======
+>>>>>>> upstream/main
         clist1 = [*range(0,int(nenvs),1)]
         clist = [envprefix + str(s) for s in clist1]
     else:
@@ -45,7 +48,11 @@ with lock:
             # append item to end of list
             clist.append(env)
         else:    
+<<<<<<< HEAD
             # get and remove env from clist
+=======
+            # pop first item off list
+>>>>>>> upstream/main
             env = clist.pop(0)
             # return env name
             print(env)
